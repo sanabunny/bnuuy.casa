@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: oklch(0.95 0.03 20);
+  background-color: oklch(0.95 0.03 15);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='48' opacity='0.15' transform='rotate(-15 60 60)'%3E🐰%3C/text%3E%3C/svg%3E");
   background-repeat: repeat;
 
@@ -17,20 +17,21 @@ body {
 
 .window {
   font-family: "M PLUS 1 Code", sans-serif;
-  background-color: oklch(0.91 0.04 20);
-  color: oklch(0.3 0.02 15);
+  background-color: oklch(0.88 0.06 15);
+  color: oklch(0.3 0.04 15);
   width: 100%;
-  max-width: 512px;
-  border: 1px solid oklch(0.7 0.08 15);
+  max-width: 640px;
+  border: 1px solid oklch(0.4 0.08 15);
   box-shadow:
-    4px 4px 0px oklch(0.75 0.06 15),
-    inset 0 0 0 1px oklch(1 0 0 / 0.33);
+    4px 4px 0px oklch(0.3 0.1 15 / 0.5),
+    inset 1px 1px 0 0 oklch(1 0 0 / 0.67),
+    inset -1px -1px 0 0 oklch(0.6 0.1 15 / 0.67);
   padding: 4px;
 }
 
 .title-bar {
   height: 1.2rem;
-  color: oklch(0.35 0.04 15);
+  color: oklch(0.3 0.04 15);
   padding: 0;
   display: flex;
   justify-content: center;
@@ -47,14 +48,14 @@ body {
 }
 
 .window-body {
-  border: 1px solid oklch(0.8 0.05 15);
-  box-shadow:
-    0 0 0 1px oklch(0.8 0.05 15 / 0.33),
-    inset 0 0 0 1px oklch(1 0 0 / 1);
-  background-color: oklch(0.98 0.01 30);
-  color: oklch(0.25 0.02 15);
+  background-color: oklch(0.98 0.01 15);
+  color: oklch(0.25 0.04 15);
   line-height: 1.5;
-  padding: 16px;
+  padding: 18px;
+  border: 1px solid oklch(0.4 0.08 15);
+  box-shadow:
+    inset 1px 1px 0 0 oklch(0.6 0.1 15 / 0.5),
+    inset -1px -1px 0 0 oklch(1 0 0 / 1);
 }
 
 h1 {
@@ -62,16 +63,16 @@ h1 {
   margin-top: 0;
   margin-bottom: 12px;
   font-family: "ChicagoFLF", "M PLUS 1 Code", sans-serif;
-  color: oklch(0.2 0.03 15);
+  color: oklch(0.4 0.15 15);
 }
 
 footer {
-  border-top: 1px dashed oklch(0.8 0.05 15);
+  border-top: 1px dashed oklch(0.7 0.08 15);
   margin-top: 20px;
   padding-top: 12px;
   text-align: center;
   font-size: 0.65rem;
-  color: oklch(0.6 0.05 15);
+  color: oklch(0.5 0.1 15);
 }
 
 .footer-bunny {
@@ -82,7 +83,7 @@ footer {
 header {
   text-align: center;
   padding: 10px 0 18px;
-  border-bottom: 1px dashed oklch(0.8 0.05 15);
+  border-bottom: 1px dashed oklch(0.7 0.08 15);
 }
 
 .bunny {
@@ -90,7 +91,7 @@ header {
   font-size: 1.05rem;
   line-height: 1.25;
   margin: 12px 0;
-  color: var(--accent-dark);
+  color: oklch(0.5 0.15 15);
   white-space: pre;
 }
 
@@ -98,19 +99,19 @@ header h1 {
   font-family: "ChicagoFLF", "M PLUS 1 Code", sans-serif;
   font-size: 2rem;
   margin: 8px 0 4px;
-  color: oklch(0.2 0.03 15);
+  color: oklch(0.3 0.08 15);
   letter-spacing: -0.03em;
 }
 
 .subtitle {
   margin: 0;
-  color: var(--text-soft);
+  color: oklch(0.5 0.1 15);
   font-size: 0.8rem;
 }
 
 .tiny-note {
   font-size: 0.7rem;
-  color: oklch(0.6 0.06 15);
+  color: oklch(0.6 0.1 15);
   margin-top: 12px;
 }
 
@@ -119,7 +120,7 @@ section {
 }
 
 section + section {
-  border-top: 1px dashed oklch(0.8 0.05 15);
+  border-top: 1px dashed oklch(0.7 0.08 15);
   margin-top: 16px;
 }
 
@@ -130,7 +131,7 @@ section > h2 {
   margin: 0 0 10px;
   font-family: "ChicagoFLF", "M PLUS 1 Code", sans-serif;
   font-size: 1rem;
-  color: oklch(0.55 0.1 15);
+  color: oklch(0.4 0.12 15);
 }
 
 section > h2::before {
