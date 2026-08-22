@@ -54,8 +54,8 @@ body {
   padding: 18px;
   border: 1px solid oklch(0.4 0.08 15);
   box-shadow:
-    -1px -1px 0 0 oklch(0.6 0.1 15 / 0.5),
-    1px 1px 0 0 oklch(1 0 0 / 1);
+    -1px -1px 0 0 oklch(0.6 0.1 15 / 0.67),
+    1px 1px 0 0 oklch(1 0 0 / 0.75);
 }
 
 h1 {
