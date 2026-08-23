@@ -1,9 +1,32 @@
+:root {
+  --bg-desktop: oklch(0.95 0.03 15);
+  --bg-window: oklch(0.88 0.06 15);
+  --bg-content: oklch(0.98 0.01 15);
+
+  --border: oklch(0.4 0.08 15);
+  --divider: oklch(0.7 0.08 15);
+
+  --shadow-drop: oklch(0.2 0.08 15 / 0.75);
+  --shadow-highlight: oklch(1 0 0 / 0.75);
+  --shadow-inset: oklch(0.6 0.1 15 / 0.67);
+
+  --text-main: oklch(0.25 0.04 15);
+  --text-dark: oklch(0.3 0.04 15);
+  --text-muted: oklch(0.5 0.1 15);
+  --text-faded: oklch(0.6 0.1 15);
+
+  --title: oklch(0.3 0.08 15);
+  --heading: oklch(0.4 0.15 15);
+  --subheading: oklch(0.4 0.12 15);
+  --accent-bunny: oklch(0.5 0.15 15);
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  background-color: oklch(0.95 0.03 15);
+  background-color: var(--bg-desktop);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='48' opacity='0.15' transform='rotate(-15 60 60)'%3E🐰%3C/text%3E%3C/svg%3E");
   background-repeat: repeat;
 
@@ -17,21 +40,21 @@ body {
 
 .window {
   font-family: "M PLUS 1 Code", sans-serif;
-  background-color: oklch(0.88 0.06 15);
-  color: oklch(0.3 0.04 15);
+  background-color: var(--bg-window);
+  color: var(--text-dark);
   width: 100%;
   max-width: 640px;
-  border: 1px solid oklch(0.4 0.08 15);
+  border: 1px solid var(--border);
   box-shadow:
-    2px 2px 0px oklch(0.2 0.08 15 / 0.75),
-    inset 1px 1px 0 0 oklch(1 0 0 / 0.75),
-    inset -1px -1px 0 0 oklch(0.6 0.1 15 / 0.67);
+    2px 2px 0px var(--shadow-drop),
+    inset 1px 1px 0 0 var(--shadow-highlight),
+    inset -1px -1px 0 0 var(--shadow-inset);
   padding: 4px;
 }
 
 .title-bar {
   height: 1rem;
-  color: oklch(0.3 0.04 15);
+  color: var(--text-dark);
   padding: 0;
   display: flex;
   justify-content: center;
@@ -48,14 +71,14 @@ body {
 }
 
 .window-body {
-  background-color: oklch(0.98 0.01 15);
-  color: oklch(0.25 0.04 15);
+  background-color: var(--bg-content);
+  color: var(--text-main);
   line-height: 1.5;
   padding: 18px;
-  border: 1px solid oklch(0.4 0.08 15);
+  border: 1px solid var(--border);
   box-shadow:
-    -1px -1px 0 0 oklch(0.6 0.1 15 / 0.67),
-    1px 1px 0 0 oklch(1 0 0 / 0.75);
+    -1px -1px 0 0 var(--shadow-inset),
+    1px 1px 0 0 var(--shadow-highlight);
 }
 
 h1 {
@@ -63,16 +86,16 @@ h1 {
   margin-top: 0;
   margin-bottom: 12px;
   font-family: "ChicagoFLF", "M PLUS 1 Code", sans-serif;
-  color: oklch(0.4 0.15 15);
+  color: var(--heading);
 }
 
 footer {
-  border-top: 1px dashed oklch(0.7 0.08 15);
+  border-top: 1px dashed var(--divider);
   margin-top: 20px;
   padding-top: 12px;
   text-align: center;
   font-size: 0.65rem;
-  color: oklch(0.5 0.1 15);
+  color: var(--text-muted);
 }
 
 .footer-bunny {
@@ -83,7 +106,7 @@ footer {
 header {
   text-align: center;
   padding: 10px 0 18px;
-  border-bottom: 1px dashed oklch(0.7 0.08 15);
+  border-bottom: 1px dashed var(--divider);
 }
 
 .bunny {
@@ -91,7 +114,7 @@ header {
   font-size: 1.05rem;
   line-height: 1.25;
   margin: 12px 0;
-  color: oklch(0.5 0.15 15);
+  color: var(--accent-bunny);
   white-space: pre;
 }
 
@@ -99,19 +122,19 @@ header h1 {
   font-family: "ChicagoFLF", "M PLUS 1 Code", sans-serif;
   font-size: 2rem;
   margin: 8px 0 4px;
-  color: oklch(0.3 0.08 15);
+  color: var(--title);
   letter-spacing: -0.03em;
 }
 
 .subtitle {
   margin: 0;
-  color: oklch(0.5 0.1 15);
+  color: var(--text-muted);
   font-size: 0.8rem;
 }
 
 .tiny-note {
   font-size: 0.7rem;
-  color: oklch(0.6 0.1 15);
+  color: var(--text-faded);
   margin-top: 12px;
 }
 
@@ -120,7 +143,7 @@ section {
 }
 
 section + section {
-  border-top: 1px dashed oklch(0.7 0.08 15);
+  border-top: 1px dashed var(--divider);
   margin-top: 16px;
 }
 
@@ -131,7 +154,7 @@ section > h2 {
   margin: 0 0 10px;
   font-family: "ChicagoFLF", "M PLUS 1 Code", sans-serif;
   font-size: 1rem;
-  color: oklch(0.4 0.12 15);
+  color: var(--subheading);
 }
 
 section > h2::before {
