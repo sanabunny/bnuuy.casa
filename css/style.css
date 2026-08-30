@@ -25,6 +25,46 @@
   box-sizing: border-box;
 }
 
+.menubar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1.75rem;
+  background: var(--bg-content);
+  border-bottom: 1px solid var(--divider);
+  box-shadow: 0 1px 0 0 var(--shadow-highlight);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8px;
+  font-family: "ChicagoFLF", "M PLUS 1 Code", sans-serif;
+  font-size: 0.75rem;
+  color: var(--text-dark);
+  z-index: 100;
+  user-select: none;
+}
+
+.menubar-leading,
+.menubar-trailing {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.menubar-item {
+  padding: 0 8px;
+  height: 1.75rem;
+  display: flex;
+  align-items: center;
+  cursor: default;
+}
+
+.menubar-item:hover {
+  background-color: var(--accent-bunny);
+  color: var(--bg-content);
+}
+
 body {
   background-color: var(--bg-desktop);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='48' opacity='0.15' transform='rotate(-15 60 60)'%3E🐰%3C/text%3E%3C/svg%3E");
@@ -35,7 +75,7 @@ body {
   align-items: center;
   min-height: 100dvh;
   margin: 0;
-  padding: 16px;
+  padding: calc(1.75rem + 16px) 16px 16px;
 }
 
 .window {
@@ -62,6 +102,28 @@ body {
   font-family: "ChicagoFLF", "M PLUS 1 Code", sans-serif;
   font-size: 0.8rem;
   margin-bottom: 4px;
+}
+
+.title-bar .leading {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.title-bar .center {
+  flex: 0 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.title-bar .trailing {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .title-bar > span {
@@ -164,4 +226,63 @@ section > h2::before {
 p {
   margin: 9px 0;
   font-size: 0.8rem;
+}
+
+a {
+  color: var(--accent-bunny);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 2px;
+  transition: color 0.15s ease;
+}
+
+a:hover {
+  color: var(--heading);
+  text-decoration-style: solid;
+}
+
+.back-btn {
+  font-family: "ChicagoFLF", "M PLUS 1 Code", sans-serif;
+  font-size: 0.7rem;
+  color: var(--text-dark);
+  text-decoration: none;
+  padding: 0 3px;
+  border: 1px solid var(--border);
+  box-shadow:
+    -1px -1px 0 0 var(--shadow-inset),
+    1px 1px 0 0 var(--shadow-highlight),
+    inset -1px -1px 0 0 var(--shadow-inset),
+    inset 1px 1px 0 0 var(--shadow-highlight);
+}
+
+.back-btn:hover {
+  background-color: var(--accent-bunny);
+  color: var(--bg-content);
+}
+
+blockquote {
+  margin: 16px 0;
+  padding: 10px 14px;
+  border-left: 3px solid var(--accent-bunny);
+  background-color: oklch(from var(--bg-window) l c h / 0.5);
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-style: italic;
+  line-height: 1.6;
+  box-shadow:
+    inset 1px 1px 0 0 var(--shadow-highlight),
+    inset -1px -1px 0 0 var(--shadow-inset);
+}
+
+blockquote p {
+  margin: 0;
+}
+
+cite {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.7rem;
+  font-style: normal;
+  color: var(--text-faded);
+  text-align: right;
 }

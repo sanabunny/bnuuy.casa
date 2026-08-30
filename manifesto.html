@@ -24,10 +24,25 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <div class="menubar">
+      <div class="menubar-leading">
+        <span class="menubar-item" id="menubar-clock"></span>
+        <span class="menubar-item" id="menubar-date"></span>
+        <span class="menubar-item">manifesto.txt</span>
+      </div>
+      <div class="menubar-trailing">
+        <span class="menubar-item">bnuuy.casa</span>
+      </div>
+    </div>
     <div class="window">
       <div class="title-bar">
-        <a href="index.html" class="back-btn">‹ back</a>
-        <span>bnuuy.casa — manifesto.txt</span>
+        <div class="leading">
+          <a href="index.html" class="back-btn">‹ back</a>
+        </div>
+        <div class="center">
+          <span>bnuuy.casa — manifesto.txt</span>
+        </div>
+        <div class="trailing"></div>
       </div>
 
       <div class="window-body">
@@ -37,11 +52,21 @@
         </header>
 
         <section id="manifesto">
-          <p>systems should follow the way people (or animals) work, if a user has a problem with a system, the system is at fault.</p>
+          <p>
+            systems should follow the way people (or animals) work, if a user
+            has a problem with a system, the system is at fault.
+          </p>
 
           <blockquote>
-            "It is time to reverse the situation: to cast the blame upon the machines and their design. It is the machine and its design that are at fault. It is the duty of machines and those who design them to understand people. It is not our duty to understand the arbitrary, meaningless dictates of machines."
-            <cite>— Don Norman, <em>The Design of Everyday Things</em> (Chapter 1, p. 6)</cite>
+            "It is time to reverse the situation: to cast the blame upon the
+            machines and their design. It is the machine and its design that are
+            at fault. It is the duty of machines and those who design them to
+            understand people. It is not our duty to understand the arbitrary,
+            meaningless dictates of machines."
+            <cite
+              >— Don Norman, <em>The Design of Everyday Things</em> (Chapter 1,
+              p. 6)</cite
+            >
           </blockquote>
         </section>
 
@@ -58,5 +83,6 @@
         </footer>
       </div>
     </div>
+    <script src="js/menubar.js"></script>
   </body>
 </html>
