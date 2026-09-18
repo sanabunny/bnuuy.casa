@@ -286,3 +286,77 @@ cite {
   color: var(--text-faded);
   text-align: right;
 }
+
+.app-card {
+  margin-top: 12px;
+  padding: 14px;
+  background-color: var(--bg-window);
+  border: 1px solid var(--border);
+  box-shadow:
+    inset 1px 1px 0 0 var(--shadow-highlight),
+    inset -1px -1px 0 0 var(--shadow-inset);
+}
+
+.app-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.app-icon {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  image-rendering: auto;
+}
+
+.app-card-title {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.app-name {
+  font-family: "ChicagoFLF", "M PLUS 1 Code", sans-serif;
+  font-size: 1.1rem;
+  color: var(--heading);
+  line-height: 1;
+}
+
+.app-tagline {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.app-screenshots {
+  display: flex;
+  gap: 8px;
+  margin: 14px 0 10px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--divider) transparent;
+}
+
+.app-screenshot {
+  height: 200px;
+  width: auto;
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+  box-shadow:
+    1px 1px 0 0 var(--shadow-drop),
+    inset 1px 1px 0 0 var(--shadow-highlight);
+}
+
+.app-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--divider);
+}
+
+.app-link {
+  font-size: 0.75rem;
+}
